@@ -20,6 +20,9 @@ public class Main {
 				ui.deleteTask();
 				break;
 			case 4:
+				ui.changeStatus();
+				break;
+			case 5:
 				System.out.println("bye");
 				input = -1;
 				break;

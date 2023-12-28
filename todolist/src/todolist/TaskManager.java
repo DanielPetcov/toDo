@@ -44,6 +44,31 @@ public class TaskManager {
 		tasks.add(task);
 	}
 	
+	public void changeStatus() {
+		if(tasks.isEmpty()) {
+			System.out.println("There are no tasks to change status.\n");
+			return;
+		}
+		
+		scanner = new Scanner(System.in);
+		System.out.print("Enter the number of the task: ");
+		int input = scanner.nextInt();
+		scanner.nextLine();
+		
+		if(input > tasks.size()) {
+			System.out.println("The index is too big.\n");
+			return;
+		}
+		
+		System.out.print("Enter the status of the task: ");
+		String status = scanner.nextLine();
+		
+		Task task = tasks.get(input-1);
+		task.setStatus(status);
+		System.out.println("The task's status was successfully changed.\n");
+		
+	}
+	
 	public void deleteTask() {
 		if(tasks.isEmpty()) {
 			System.out.println("There are no tasks to delete.\n");

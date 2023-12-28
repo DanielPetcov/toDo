@@ -16,7 +16,8 @@ public class UserInterface {
 		System.out.println("1. See tasks.");
 		System.out.println("2. Add task.");
 		System.out.println("3. Delete a task.");
-		System.out.println("4. Exit.");
+		System.out.println("4. Change task status.");
+		System.out.println("5. Exit.");
 		System.out.println("*******************");
 		System.out.println();
 	}
@@ -31,6 +32,10 @@ public class UserInterface {
 	
 	public void deleteTask() {
 		taskManager.deleteTask();
+	}
+	
+	public void changeStatus() {
+		taskManager.changeStatus();
 	}
 	
 	public int getUserInput() {
